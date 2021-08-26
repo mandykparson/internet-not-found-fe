@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import GameTrigger from './Components/GameTrigger';
+import LeaderBoard from './Components/LeaderBoard';
+import { useState } from 'react'
 
 function App() {
+
+  const [ trigger, setTrigger ] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" className="container">
+      <h1>Internet Not Found</h1>
+      {(trigger) ? (
+          <h1>The Game</h1>
+        ) : (
+          <div>
+            <LeaderBoard />
+            <GameTrigger trigger={trigger} setTrigger={setTrigger}/>
+          </div>
+        )
+      }
     </div>
   );
 }

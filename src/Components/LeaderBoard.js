@@ -5,7 +5,7 @@ import Leader from './Leader'
 export default function LeaderBoard() {
 
     const [ players, setPlayers ] = useState('')
-    const [ playersURL ] = useState('https://internet-not-found-be.herokuapp.com/players')
+    const [ playersURL ] = useState('https://internet-not-found-be.herokuapp.com/players/top_five')
 
     useEffect(() => {
         fetch(playersURL)

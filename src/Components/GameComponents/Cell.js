@@ -4,6 +4,8 @@ import { OBSTACLE_SPRITES } from '../../ObstacleSprites'
 
 export default function Cell({ type }) {
     return (
-        <StyledCell type={'o'} color={OBSTACLE_SPRITES['o'].color}>cell</StyledCell>
+        <StyledCell type={type} color={OBSTACLE_SPRITES[type].color}/>
     )
 }
+
+
